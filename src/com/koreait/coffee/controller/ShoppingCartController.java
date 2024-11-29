@@ -29,4 +29,8 @@ public class ShoppingCartController {
     public List<ShoppingCart> getShoppingCart(){
         return mapper.selectShoppingCart();
     }
+
+    public Double getAmount(Integer shoppingCartId, Integer dishId){
+        return mapper.getAmount(shoppingCartId,dishId);
+    }
 }

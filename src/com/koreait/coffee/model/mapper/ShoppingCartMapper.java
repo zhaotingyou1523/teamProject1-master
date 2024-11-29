@@ -20,4 +20,6 @@ public interface ShoppingCartMapper {
 
     @Select("select * from shopping_cart")
     List<ShoppingCart> selectShoppingCart();
+
+    Double getAmount(Integer ShoppingCartId,Integer dishId);
 }

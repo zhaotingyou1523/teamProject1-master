@@ -33,4 +33,7 @@
         </set>
         where dish_id = #{dishId};
     </update>
+    <select id="getAmount" resultType="Double">
+        select SUM(d.price * s.number) from dish d,shopping_cart s where d.id = s.dish_id;
+    </select>
 </mapper>
